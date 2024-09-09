@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=9133eb49-3a97-4b2d-90be-6b80a97a5036" type="text/javascript"></script>
+    <title>Главная</title>
+</head>
+
+
+
+<style>
+    .wrapper a {
+        font-size: 30px;
+        text-transform: capitalize;
+    }
+
+    .wrapper button {
+        margin-bottom: 25px;
+        width: 300px;
+        height: 45px;
+    }
+</style>
+
+<body class="m-page">
+
+    <div class="wrapper" style="padding: 50px;">
+        <a href="index.html" style="display: block; margin-bottom: 20px;">
+            Главная
+        </a>
+        <a href="index2.html" style="display: block; margin-bottom: 20px;">
+            Главная (отправленные формы)
+        </a>
+
+
+
+
+        <button data-modal="docModal" style="border: 2px solid #000;margin-bottom: 20px;">
+            Подать документы
+        </button>
+        <button data-modal="thankModal" style="border: 2px solid #000;margin-bottom: 20px;">
+            Спасибо
+        </button>
+        <button data-modal="cityModal" style="border: 2px solid #000;margin-bottom: 20px;">
+            Выбор города
+        </button>
+
+    </div>
+
+
+    <!--  -->
+    <div class="modal" id="docModal">
+        <div class="modal__bg _close-modal"></div>
+        <div class="modal__dialog">
+            <button class="close-btn _close-modal">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22.3499 20L29.5166 12.85C29.8304 12.5362 30.0067 12.1105 30.0067 11.6667C30.0067 11.2228 29.8304 10.7972 29.5166 10.4833C29.2027 10.1695 28.7771 9.99319 28.3332 9.99319C27.8894 9.99319 27.4637 10.1695 27.1499 10.4833L19.9999 17.65L12.8499 10.4833C12.5361 10.1695 12.1104 9.99319 11.6666 9.99319C11.2227 9.99319 10.7971 10.1695 10.4832 10.4833C10.1694 10.7972 9.99308 11.2228 9.99308 11.6667C9.99308 12.1105 10.1694 12.5362 10.4832 12.85L17.6499 20L10.4832 27.15C10.327 27.305 10.203 27.4893 10.1184 27.6924C10.0338 27.8955 9.99023 28.1133 9.99023 28.3333C9.99023 28.5534 10.0338 28.7712 10.1184 28.9743C10.203 29.1774 10.327 29.3617 10.4832 29.5167C10.6382 29.6729 10.8225 29.7969 11.0256 29.8815C11.2287 29.9661 11.4465 30.0097 11.6666 30.0097C11.8866 30.0097 12.1044 29.9661 12.3075 29.8815C12.5106 29.7969 12.695 29.6729 12.8499 29.5167L19.9999 22.35L27.1499 29.5167C27.3048 29.6729 27.4892 29.7969 27.6923 29.8815C27.8954 29.9661 28.1132 30.0097 28.3332 30.0097C28.5533 30.0097 28.7711 29.9661 28.9742 29.8815C29.1773 29.7969 29.3616 29.6729 29.5166 29.5167C29.6728 29.3617 29.7968 29.1774 29.8814 28.9743C29.966 28.7712 30.0096 28.5534 30.0096 28.3333C30.0096 28.1133 29.966 27.8955 29.8814 27.6924C29.7968 27.4893 29.6728 27.305 29.5166 27.15L22.3499 20Z" fill="#ED1F26" />
+                </svg>
+            </button>
+            <div class="text70">
+                <span>Подать документы</span> на оформление
+                займа под залог авто
+            </div>
+            <form action="" class="main-form">
+                <fieldset class="fg">
+                    <input type="text" placeholder="Ваше имя">
+                </fieldset>
+                <fieldset class="fg">
+                    <input type="tel" placeholder="+7 (___) ___-__-__">
+                </fieldset>
+                <button class="_full m-btn m-btn-red">
+                    <span>Отправить заявку</span>
+                </button>
+                <div class="m-check _full">
+                    <input type="checkbox">
+                    <label>
+                        <span>Нажимая на кнопку «Отправить заявку», я соглашаюсь на обработку персональных данных <br> и согласен с Политикой конфиденциальности и Лицензией</span>
+                    </label>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+    <div class="modal" id="thankModal">
+        <div class="modal__bg _close-modal"></div>
+        <div class="modal__dialog">
+            <button class="close-btn _close-modal">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22.3499 20L29.5166 12.85C29.8304 12.5362 30.0067 12.1105 30.0067 11.6667C30.0067 11.2228 29.8304 10.7972 29.5166 10.4833C29.2027 10.1695 28.7771 9.99319 28.3332 9.99319C27.8894 9.99319 27.4637 10.1695 27.1499 10.4833L19.9999 17.65L12.8499 10.4833C12.5361 10.1695 12.1104 9.99319 11.6666 9.99319C11.2227 9.99319 10.7971 10.1695 10.4832 10.4833C10.1694 10.7972 9.99308 11.2228 9.99308 11.6667C9.99308 12.1105 10.1694 12.5362 10.4832 12.85L17.6499 20L10.4832 27.15C10.327 27.305 10.203 27.4893 10.1184 27.6924C10.0338 27.8955 9.99023 28.1133 9.99023 28.3333C9.99023 28.5534 10.0338 28.7712 10.1184 28.9743C10.203 29.1774 10.327 29.3617 10.4832 29.5167C10.6382 29.6729 10.8225 29.7969 11.0256 29.8815C11.2287 29.9661 11.4465 30.0097 11.6666 30.0097C11.8866 30.0097 12.1044 29.9661 12.3075 29.8815C12.5106 29.7969 12.695 29.6729 12.8499 29.5167L19.9999 22.35L27.1499 29.5167C27.3048 29.6729 27.4892 29.7969 27.6923 29.8815C27.8954 29.9661 28.1132 30.0097 28.3332 30.0097C28.5533 30.0097 28.7711 29.9661 28.9742 29.8815C29.1773 29.7969 29.3616 29.6729 29.5166 29.5167C29.6728 29.3617 29.7968 29.1774 29.8814 28.9743C29.966 28.7712 30.0096 28.5534 30.0096 28.3333C30.0096 28.1133 29.966 27.8955 29.8814 27.6924C29.7968 27.4893 29.6728 27.305 29.5166 27.15L22.3499 20Z" fill="#ED1F26" />
+                </svg>
+            </button>
+            <div class="text70">
+                <span>Спасибо,</span> <br>
+            ваша заявка получена.
+            </div>
+            <div class="modal__text">
+                <div class="text24">Мы свяжемся с вами в рабочее время</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal city-modal" id="cityModal">
+        <div class="modal__bg _close-modal"></div>
+        <div class="modal__dialog">
+            <button class="close-btn _close-modal">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22.3499 20L29.5166 12.85C29.8304 12.5362 30.0067 12.1105 30.0067 11.6667C30.0067 11.2228 29.8304 10.7972 29.5166 10.4833C29.2027 10.1695 28.7771 9.99319 28.3332 9.99319C27.8894 9.99319 27.4637 10.1695 27.1499 10.4833L19.9999 17.65L12.8499 10.4833C12.5361 10.1695 12.1104 9.99319 11.6666 9.99319C11.2227 9.99319 10.7971 10.1695 10.4832 10.4833C10.1694 10.7972 9.99308 11.2228 9.99308 11.6667C9.99308 12.1105 10.1694 12.5362 10.4832 12.85L17.6499 20L10.4832 27.15C10.327 27.305 10.203 27.4893 10.1184 27.6924C10.0338 27.8955 9.99023 28.1133 9.99023 28.3333C9.99023 28.5534 10.0338 28.7712 10.1184 28.9743C10.203 29.1774 10.327 29.3617 10.4832 29.5167C10.6382 29.6729 10.8225 29.7969 11.0256 29.8815C11.2287 29.9661 11.4465 30.0097 11.6666 30.0097C11.8866 30.0097 12.1044 29.9661 12.3075 29.8815C12.5106 29.7969 12.695 29.6729 12.8499 29.5167L19.9999 22.35L27.1499 29.5167C27.3048 29.6729 27.4892 29.7969 27.6923 29.8815C27.8954 29.9661 28.1132 30.0097 28.3332 30.0097C28.5533 30.0097 28.7711 29.9661 28.9742 29.8815C29.1773 29.7969 29.3616 29.6729 29.5166 29.5167C29.6728 29.3617 29.7968 29.1774 29.8814 28.9743C29.966 28.7712 30.0096 28.5534 30.0096 28.3333C30.0096 28.1133 29.966 27.8955 29.8814 27.6924C29.7968 27.4893 29.6728 27.305 29.5166 27.15L22.3499 20Z" fill="#ED1F26" />
+                </svg>
+            </button>
+            <div class="text70">
+                <span>Выбор</span> города
+            </div>
+            <div class="modal__cities">
+                <a href="" class="city-item"><span>Ангарск</span></a>
+                <a href="" class="city-item"><span>Братск</span></a>
+                <a href="" class="city-item"><span>Вихоревка</span></a>
+                <a href="" class="city-item"><span>Железногорск-Илимский</span></a>
+                <a href="" class="city-item"><span>Залари</span></a>
+                <a href="" class="city-item"><span>Зима</span></a>
+                <a href="" class="city-item _active"><span>Иркутск</span></a>
+                <a href="" class="city-item"><span>Нижнеудинск</span></a>
+                <a href="" class="city-item"><span>Саянск</span></a>
+                <a href="" class="city-item"><span>Свирск</span></a>
+                <a href="" class="city-item"><span>Слюдянка</span></a>
+                <a href="" class="city-item"><span>Тайшет</span></a>
+                <a href="" class="city-item"><span>Тулун</span></a>
+                <a href="" class="city-item"><span>Улан-Удэ</span></a>
+                <a href="" class="city-item"><span>Усолье-Сибирское</span></a>
+                <a href="" class="city-item"><span>Усть-Илимск</span></a>
+                <a href="" class="city-item"><span>Усть-Ордынский</span></a>
+                <a href="" class="city-item"><span>Черемхово</span></a>
+                <a href="" class="city-item"><span>Шелехов</span></a>
+                <a href="" class="city-item"><span>Хомутово</span></a>
+                <a href="" class="city-item"><span>Качуг</span></a>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.min.js"></script>
+
+</body>
+
+</html>
